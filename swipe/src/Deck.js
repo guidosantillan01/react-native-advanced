@@ -7,9 +7,7 @@ class Deck extends Component {
 
     const panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onPanResponderMove: (event, gesture) => {
-        console.log(gesture);
-      },
+      onPanResponderMove: (event, gesture) => {},
       onPanResponderRelease: () => {},
     });
 
@@ -23,7 +21,9 @@ class Deck extends Component {
   }
 
   render() {
-    return <View>{this.renderCards()}</View>;
+    return (
+      <View {...this.state.panResponder.panHandlers}>{this.renderCards()}</View>
+    );
   }
 }
 
