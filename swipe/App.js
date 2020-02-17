@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import Ball from './src/Ball';
 
@@ -12,3 +12,10 @@ export default class App extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
